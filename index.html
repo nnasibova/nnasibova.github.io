@@ -62,12 +62,14 @@
   }
   .block-label.client { background: rgba(108,99,255,0.12); color: rgba(108,99,255,0.9); border: 1px solid rgba(108,99,255,0.2); }
   .block-label.personal { background: rgba(72,207,173,0.1); color: var(--accent2); border: 1px solid rgba(72,207,173,0.2); }
+  .block-label.other { background: rgba(250,199,75,0.1); color: #FAC74B; border: 1px solid rgba(250,199,75,0.2); }
   .block-label::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
   .project-card { padding: 1.75rem; background: var(--bg2); border: 1px solid var(--border); border-radius: 16px; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
   .project-card:hover { border-color: rgba(108,99,255,0.35); transform: translateY(-3px); }
   .project-card.personal:hover { border-color: rgba(72,207,173,0.35); }
+  .project-card.other:hover { border-color: rgba(250,199,75,0.35); }
   .project-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
   .project-emoji { font-size: 2rem; }
   .project-links { display: flex; gap: 8px; }
@@ -81,6 +83,7 @@
   .tag.bloc { background: rgba(72,207,173,0.1); color: var(--accent2); border-color: rgba(72,207,173,0.2); }
   .tag.gov { background: rgba(255,100,100,0.1); color: #FF8080; border-color: rgba(255,100,100,0.2); }
   .tag.solo { background: rgba(250,199,75,0.1); color: #FAC74B; border-color: rgba(250,199,75,0.2); }
+  .tag.stack { background: rgba(255,255,255,0.08); color: #D0D0DA; border-color: rgba(255,255,255,0.15); }
 
   /* DIVIDER */
   .divider { border: none; border-top: 1px solid var(--border); margin: 0 0 3.5rem; }
@@ -300,17 +303,40 @@
         <div class="project-header">
           <div class="project-emoji">🚩</div>
           <div class="project-links">
+            <a href="https://play.google.com/store/apps/details?id=com.n9.learnflags" target="_blank" title="Play Store"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M3 22V2l19 10L3 22z"/></svg></a>
             <a href="https://github.com/nnasibova" target="_blank" title="GitHub">⌥</a>
           </div>
         </div>
         <h3>N9 Flags — Geography Quiz</h3>
-        <p>Flag and geography quiz game with multiple game modes, regional categories, and score tracking. Built solo with Flutter. Coming soon to Play Store.</p>
+        <p>Flag and geography quiz game with multiple game modes, regional categories, and score tracking. Built solo with Flutter.</p>
         <div class="project-tags">
-          <span class="tag flutter">Flutter</span><span class="tag solo">Solo</span><span class="tag">Coming Soon</span>
+          <span class="tag flutter">Flutter</span><span class="tag solo">Solo</span><span class="tag">Published</span>
         </div>
       </div>
 
+    </div>
+  </div>
 
+  <hr class="divider"/>
+
+  <!-- OTHER / BEYOND FLUTTER -->
+  <div class="project-block">
+    <div class="block-label other">Beyond Flutter</div>
+    <div class="projects-grid">
+
+      <div class="project-card other">
+        <div class="project-header">
+          <div class="project-emoji">🛍️</div>
+          <div class="project-links">
+            <a href="https://vitrino-az.vercel.app/horoscope" target="_blank" title="Live Site">↗</a>
+          </div>
+        </div>
+        <h3>Vitrino</h3>
+        <p>Link-in-bio mini-store platform for Instagram sellers in Azerbaijan. Multi-tenant SaaS with a WhatsApp ordering flow, built end to end from planning to MVP.</p>
+        <div class="project-tags">
+          <span class="tag stack">Next.js</span><span class="tag stack">Supabase</span><span class="tag stack">Vercel</span><span class="tag">SaaS</span>
+        </div>
+      </div>
 
     </div>
   </div>
